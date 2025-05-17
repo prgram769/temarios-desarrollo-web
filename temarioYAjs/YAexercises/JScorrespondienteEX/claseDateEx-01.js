@@ -1,15 +1,19 @@
 // Confeccionar un programa que muestre en que cuatrimestre del año nos encontramos. Para esto obtener el mes. 
 
-let mesActual
+let fecha
 
-mesActual = prompt ("Dime el número del mes en el que nos encontramos:")
-mesActual = parseInt(mesActual)
+fecha = new Date()
+
+mesActual = fecha.getMonth()
 
 function averiguarCuatrimestre() {
     switch (mesActual) {
-        case 1:
+        case 0:
             document.writeln("Primero")
             break;
+        case 1:
+            document.writeln("Primero")
+            break
         case 2:
             document.writeln("Primero")
             break
@@ -17,7 +21,7 @@ function averiguarCuatrimestre() {
             document.writeln("Primero")
             break
         case 4:
-            document.writeln("Primero")
+            document.writeln("Segundo")
             break
         case 5:
             document.writeln("Segundo")
@@ -29,7 +33,7 @@ function averiguarCuatrimestre() {
             document.writeln("Segundo")
             break
         case 8:
-            document.writeln("Segundo")
+            document.writeln("Tercero")
             break
         case 9:
             document.writeln("Tercero")
@@ -38,9 +42,6 @@ function averiguarCuatrimestre() {
             document.writeln("Tercero")
             break
         case 11:
-            document.writeln("Tercero")
-            break
-        case 12:
             document.writeln("Tercero")
             break;
     }
