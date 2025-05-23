@@ -14,6 +14,8 @@ if (!element) {
     alert("No hay ningun elemento con el Id another")
 }
 
+// querySelectorAll()
+
 let list_elements = document.querySelectorAll("li")
 
 console.log(list_elements);
