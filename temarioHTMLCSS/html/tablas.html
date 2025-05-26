@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablas</title>
+</head>
+<body>
+    <!--table para generar la tabla simple-->
+    <!--tr para filas-->
+    <!--th para celda negrita y centrado-->
+    <!--td para celda normal-->
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Pepe</td>
+            <td>perez</td>
+            <td>2 de palmeto</td>
+            <td>0000000</td>
+            <td>pepeldelospalotes@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>Navarro</td>
+            <td>uretra</td>
+            <td>0101010101</td>
+            <td>carlitosfiesta@gmai.com</td>
+        </tr>
+        <tr>
+            <td>elbirras</td>
+            <td>toilet</td>
+            <td>uretras</td>
+            <td>6969696969</td>
+            <td>elbirris@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Inmi</td>
+            <td>ruisma</td>
+            <td>utrersas</td>
+            <td>6el9</td>
+            <td>inmita@gmail.com</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!--Table para tablas complejas-->
+    <!--colgroup agrupar columnas para agregar estilos-->
+    <!--caption titulo encima de la tabla-->
+    <!--thead cabecera de la tabla-->
+    <!--tbody para cuerpo de la tabla-->
+    <!--tfoot para pie de la tabla-->
+
+    <br>
+
+    <table>
+        <colgroup>
+            <col span="3" style="background-color: gray;">
+            <col style="background-color: yellow;">
+            <col style="background-color: green;">
+        </colgroup>
+        <caption>Alumnos matriculados</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepe</td>
+                <td>perez</td>
+                <td>2 de palmeto</td>
+                <td>0000000</td>
+                <td>pepeldelospalotes@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Carlos</td>
+                <td>Navarro</td>
+                <td>uretra</td>
+                <td>0101010101</td>
+                <td>carlitosfiesta@gmai.com</td>  
+            </tr>
+            <tr>
+                <td>elbirras</td>
+                <td>toilet</td>
+                <td>uretras</td>
+                <td>6969696969</td>
+                <td>elbirris@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Inmi</td>
+                <td>ruisma</td>
+                <td>utrersas</td>
+                <td>6el9</td>
+                <td>inmita@gmail.com</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    pie de la tabla donde podria poner mas texto
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
