@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!--Form -> etiqueta padre, siempre hay que ponerla-->
+
+    <form action="formularios.html" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="">
+        </p>
+        <p>
+            <label for="provincia">Provincia</label>
+            <select name="provincia" multiple>
+                <option value="Z">Zaragoza</option>
+                <option>Huesca</option>
+                <option>Teruel</option>
+            </select>
+        </p>
+        <p>
+            <textarea id="" cols="10" rows="10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptate corrupti ut earum, aliquam sint amet repellendus, vitae placeat repellat quis, ipsa qui. Velit placeat reiciendis tempore autem nostrum eaque?</textarea>
+        </p>
+        <p>
+            <button type="button">Haz click</button>
+        </p>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Inserta nombre" required>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" value="perez" readonly>
+            </p>
+            <p>
+                <label for="provincia">Provincia</label>
+                <select name="provincia" id="">
+                    <optgroup label="Aragon">
+                        <option value="Z">Zaragoza</option>
+                        <option>Huesca</option>
+                        <option selected>Teruel</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
