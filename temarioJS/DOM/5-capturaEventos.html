@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de eventos</title>
+    <link rel="stylesheet" href="csscorrespondiente/style2.css">
+    <link rel="stylesheet" href="csscorrespondiente/style3.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Captura de eventos: Estrategia bubbling</h3>
+
+        <div id="bubbling">
+            <div id="A">
+                A
+                <div id="B">
+                    B
+                    <div id="C">
+                        C
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Captura de eventos: Estrategia capturing</h3>
+        
+        <div id="capturing">
+            <div id="D">
+                D
+                <div id="E">
+                    E
+                    <div id="F">
+                        F
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div id="position">
+            <p>X: <span id="X"></span> Y: <span id="Y"></span></p>
+            <p>
+                <button id="stop">Stop tracking mouse</button>
+            </p>
+        </div>
+        <div class="container3">
+            <p onclick="changeColor(event)">
+                Evento capturado inline - no recomendado
+            </p>
+            <p id="example">
+                Evento captura con funciones nativas
+            </p>
+            <p id="listener">
+                Evento captura con listeners
+            </p>
+        </div>
+    </div>
+    <script src="JScorrespondiente/5-capturaEventos.js"></script>
+</body>
+</html>
