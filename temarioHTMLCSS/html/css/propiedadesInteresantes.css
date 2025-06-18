@@ -1,0 +1,40 @@
+body {
+    background-color: gray;
+}
+
+#container1 {
+    width: 50%;
+    background-color: red;
+}
+
+#container2 {
+    width: 1000px;
+    background-color: blue;
+}
+
+#container1 img{
+    width: 10%;
+}
+
+#container2 img {
+    width: 20%;
+}
+
+#container1, #container2 {
+    margin: 50px;
+    padding: 30px;
+    border-top: 10px solid green;
+    border-bottom: 10px dashed orange;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    text-indent: 100px;
+}
+
+span {
+    text-decoration: underline;
+}
