@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de tablas</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <h1>EJERCICIO PRACTICO CON TABLAS</h1>
+    <table>
+        <thead>
+            <tr>
+            <th></th>
+            <th rowspan="1" colspan="3" class="azul"><img src="img/120_ipod.png" width="50px" height="50px" alt=""></th>
+            <th rowspan="1" colspan="2" class="azul"><img src="img/100_ipod.png" width="50px" height="50px" alt=""></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="rojo">Capacidad</td>
+                <td class="">2GB</td>
+                <td class="gris">4GB</td>
+                <td class="gris">8GB</td>
+                <td class="gris">32GB</td>
+                <td class="gris">2GB</td>
+            </tr>
+            <tr>
+                <td class="rojo">Colores</td>
+                <td>Blanco</td>
+                <td><ul class="listRojo">
+                    <li>Negro</li>
+                    <li>Rosa</li>
+                    <li>Dorado</li>
+                </ul></td>
+                <td>Negro</td>
+                <td colspan="2" id="listRojoFondo"><ul>
+                    <li>Negro</li>
+                    <li>Blanco</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td class="rojo">Pantalla</td>
+                <td colspan="3" class="azul">3 Pulgadas</td>
+                <td colspan="2" class="azul">7 Pulgadas</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="rojo">Tiempo de carga</td>
+                <td colspan="3" rowspan="2" class="azul">1 Hora</td>
+                <td colspan="2" id="amarillo">5 Horas</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="azul">30 mins para 75%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
