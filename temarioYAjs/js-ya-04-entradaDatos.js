@@ -16,7 +16,7 @@ const readline = require('readline')
 
 /* configurar la interfaz de lectura */
 
-const r1 = readline.createInterface({
+const r0 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
