@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo localStorage Dinámico</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+    ul { list-style-type: disc; margin-left: 20px; }
+    li { margin: 5px 0; }
+    .item-button { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tareas</h1>
+  <!-- Formulario para agregar tareas -->
+  <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Nueva tarea" required />
+    <button type="submit">Agregar</button>
+  </form>
+  <!-- Lista donde se mostrarán las tareas -->
+  <ul id="taskList"></ul>
+  <!-- Botón para borrar todas las tareas -->
+  <button id="clearBtn">Borrar todas</button>
+
+  <script>
+    // Recupera la lista de tareas guardadas o crea un arreglo vacío
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    // Función que muestra las tareas en el DOM
+    function displayTasks() {
+      const list = document.getElementById('taskList');
+      list.innerHTML = ''; // Limpia la lista actual
+      // Por cada tarea en el arreglo, crear un elemento <li>
+      tasks.forEach((tarea, index) => {
+        const li = document.createElement('li');
+        li.textContent = tarea;
+        // Botón para eliminar esta tarea
+        const btn = document.createElement('button');
+        btn.textContent = 'Eliminar';
+        btn.className = 'item-button';
+        btn.onclick = () => removeTask(index);
+        li.appendChild(btn);
+        list.appendChild(li);
+      });
+    }
+
+    // Función que maneja el envío del formulario (agregar tarea)
+    document.getElementById('taskForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita recargar la página
+      const input = document.getElementById('taskInput');
+      const nuevaTarea = input.value.trim();
+      if (nuevaTarea !== '') {
+        tasks.push(nuevaTarea); // Agrega tarea al arreglo
+        // Actualiza localStorage con el nuevo arreglo (como JSON)
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        input.value = ''; // Limpia el campo de texto
+        displayTasks();   // Muestra la lista actualizada
+      }
+    });
+
+    // Función para eliminar una tarea por índice
+    function removeTask(index) {
+      tasks.splice(index, 1); // Elimina la tarea del arreglo
+      localStorage.setItem('tasks', JSON.stringify(tasks)); // Actualiza el storage
+      displayTasks(); // Actualiza la lista en pantalla
+    }
+
+    // Botón para borrar todas las tareas almacenadas
+    document.getElementById('clearBtn').addEventListener('click', function() {
+      tasks = [];
+      localStorage.removeItem('tasks'); // Elimina la entrada "tasks"
+      displayTasks(); // Lista vacía en pantalla
+    });
+
+    // Al cargar la página, mostrar las tareas guardadas (si hay)
+    window.onload = displayTasks;
+  </script>
+</body>
+</html>
